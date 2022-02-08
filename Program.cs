@@ -12,27 +12,6 @@ namespace Console_App1
         {
             //double hind = 15;
             //string p_tuup = "täis";
-            //Console.WriteLine("Kirjutage kaks nime");
-            //string n1 = Console.ReadLine();
-            //string n2 = Console.ReadLine();
-            //if ((n1 == "Edgar" && n2 == "Marco") || (n1 == "Mihhail" && n2 == "Marco") || (n1 == "Marco" && n2 == "Edgar") || (n1 == "Marco" && n2 == "Mihhail") || (n1 == "Ervin" && n2 == "Vlademir") || (n1 == "Vlademir" && n2 == "Ervin") || (n1 == "Aleksandr" && n2 == "Aleksandr") || (n1 == "Daniil" && n2 == "Aleksandr") || (n1 == "Aleksandr" && n2 == "Daniil") || (n1 == "Jelena" && n2 == "Alina") || (n1 == "Alina" && n2 == "Jelena"))
-            //{
-            //    Console.WriteLine("Te olete pinginaabrid");
-            //}
-            //else
-            //{
-            //    Console.WriteLine("Te ei ole pinginaabrid");
-            //}
-
-            Console.WriteLine("Kirjutage ristkülikukujulise toa seinte pikkused");
-            double a;
-            a = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine($"{a}");
-            double b;
-            b = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine($"{b}");
-            Console.WriteLine("Remont?");
-            string vastus = Console.ReadLine();
             //if (vastus == "+")
             //{
             //    Console.WriteLine("Kui palju maksab ruutmeeter?");
@@ -57,11 +36,9 @@ namespace Console_App1
             //    }
             //    i++;
             //}
-
             //Console.WriteLine("Tere {0}", nimi);
             //if (nimi.ToUpper() == "JUKU" || nimi.ToLower() == "edgar")
             //{
-
             //    Console.WriteLine($"Tule külla! {nimi} Kas tahad kinno?");
             //    string vastus = Console.ReadLine();
             //    if (vastus.ToLower() == "jah" || vastus.ToLower() == "yes")
@@ -100,12 +77,38 @@ namespace Console_App1
             //{
             //    Console.WriteLine("Täna ma olen hõivatud :(");
             //}
+            
+
+            //Console.WriteLine("Kirjutage kaks nime");
+            //string n1 = Console.ReadLine();
+            //string n2 = Console.ReadLine();
+            //if ((n1 == "Edgar" && n2 == "Marco") || (n1 == "Mihhail" && n2 == "Marco") || (n1 == "Marco" && n2 == "Edgar") || (n1 == "Marco" && n2 == "Mihhail") || (n1 == "Ervin" && n2 == "Vlademir") || (n1 == "Vlademir" && n2 == "Ervin") || (n1 == "Aleksandr" && n2 == "Aleksandr") || (n1 == "Daniil" && n2 == "Aleksandr") || (n1 == "Aleksandr" && n2 == "Daniil") || (n1 == "Jelena" && n2 == "Alina") || (n1 == "Alina" && n2 == "Jelena"))
+            //{
+            //    Console.WriteLine("Te olete pinginaabrid");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Te ei ole pinginaabrid");
+            //}
+
+
+            Console.WriteLine("Kirjutage ristkülikukujulise toa seinte pikkused");
+            double a;
+            a = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine($"{a}");
+            double b;
+            b = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine($"{b}");
+            Console.WriteLine("Remont?");
+            string vastus = Console.ReadLine();
+
+
             ConsoleKeyInfo klik;
             do
             {
                 klik = Console.ReadKey(true);
                 Console.Beep();
-            } while (klik.Key != ConsoleKey.Escape);
+            } while (klik.Key != ConsoleKey.Escape;
             Environment.Exit(0);
         }
     }
