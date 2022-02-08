@@ -4,125 +4,240 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Console_App1
+namespace ConsoleApp_CSharp
 {
     class Program
     {
         static void Main(string[] args)
         {
-            //double hind = 15;
-            //string p_tuup = "täis";
-            //if (vastus == "+")
-            //{
-            //    Console.WriteLine("Kui palju maksab ruutmeeter?");
-            //    double summa = double.Parse(Console.ReadLine());
-            //}
-            //Console.WriteLine();
-            //Console.WriteLine("Tere tulemast! Mis on sinu nimi?");
-            //Console.Title = "Pealkiri";
+            Console.OutputEncoding = Encoding.UTF8;
+            double hind = 15;
+            string p_tuup = "täis";
+            //Console.WriteLine("Hello world!!! Mis on sinu nimi?");
+            Console.Title = "Pealkiri";
             //string nimi = Console.ReadLine();
-            //char[] tahed = nimi.ToCharArray();//juku -> ['j','u','k','u']
-            //int i = 0;
+            //char[] tahed = nimi.ToCharArray();
+            int i = 0;
             //nimi = "";
-            //foreach (var t in tahed)
-            //{
-            //    if (i == 0)
-            //    {
-            //        nimi += t.ToString().ToUpper();
-            //    }
-            //    else
-            //    {
-            //        nimi += t.ToString().ToLower();
-            //    }
-            //    i++;
-            //}
-            //Console.WriteLine("Tere {0}", nimi);
-            //if (nimi.ToUpper() == "JUKU" || nimi.ToLower() == "edgar")
-            //{
-            //    Console.WriteLine($"Tule külla! {nimi} Kas tahad kinno?");
-            //    string vastus = Console.ReadLine();
-            //    if (vastus.ToLower() == "jah" || vastus.ToLower() == "yes")
-            //    {                    
-            //        int vanus = int.Parse(Console.ReadLine());
-            //        if (vanus < 0 || vanus > 109)
-            //        {
-            //            Console.WriteLine("Viga!");
-            //        }
-            //        else
-            //        {
-            //            if (vanus > 0 && vanus < 6)
-            //            {
-            //                hind -= hind;
-            //                p_tuup = "tasuta";
-            //            }
-            //            else if (vanus >= 6 && vanus < 16)
-            //            {
-            //                hind -= hind * 0.5;
-            //                p_tuup = "laste";
-            //            }
-            //            else if (vanus >= 16 && vanus < 21)
-            //            {
-            //                hind -= hind * 0.9;
-            //                p_tuup = "noor";
-            //            }
-            //            Console.WriteLine("{0}, sul on {2}pilet vaja maksta {1}", nimi, hind, p_tuup);
-            //        }
-            //    }
-            //    else
-            //    {
-            //        Console.WriteLine("Ei taha?! :(");
-            //    }
-            //}
-            //else
-            //{
-            //    Console.WriteLine("Täna ma olen hõivatud :(");
-            //}
+            string n2, n3;
+            double a, b;
             
-
-            //Console.WriteLine("Kirjutage kaks nime");
-            //string n1 = Console.ReadLine();
-            //string n2 = Console.ReadLine();
-            //if ((n1 == "Edgar" && n2 == "Marco") || (n1 == "Mihhail" && n2 == "Marco") || (n1 == "Marco" && n2 == "Edgar") || (n1 == "Marco" && n2 == "Mihhail") || (n1 == "Ervin" && n2 == "Vlademir") || (n1 == "Vlademir" && n2 == "Ervin") || (n1 == "Aleksandr" && n2 == "Aleksandr") || (n1 == "Daniil" && n2 == "Aleksandr") || (n1 == "Aleksandr" && n2 == "Daniil") || (n1 == "Jelena" && n2 == "Alina") || (n1 == "Alina" && n2 == "Jelena"))
-            //{
-            //    Console.WriteLine("Te olete pinginaabrid");
-            //}
-            //else
-            //{
-            //    Console.WriteLine("Te ei ole pinginaabrid");
-            //}
-
-
-            Console.WriteLine("Kirjutage ristkülikukujulise toa seinte pikkused");
-            double a;
-            a = Convert.ToDouble(Console.ReadLine());
-            double b;
-            b = Convert.ToDouble(Console.ReadLine());
-            double pindala = a * b;
-            Console.WriteLine(pindala); //"Teie pindala - {0} m2",
-            Console.WriteLine("Kas tahate remonti teha? (+/-)");
-            string vastus = Console.ReadLine();
-            if(vastus == "+")
+            foreach (var t in tahed)
             {
-                Console.WriteLine("Kui palju maksab 1 ruutmeeter?");
-                double hind;
-                hind = Convert.ToDouble(Console.ReadLine());
-                double raha = pindala * hind
-                Console.WriteLine(raha) //"Teie remondi eest tuleb maksta {0} eurot",
+                if (i == 0) 
+                {
+                    nimi += t.ToString().ToUpper();
+                }
+                else
+                {
+                    nimi += t.ToString().ToLower();
+                }
+                i++;
+            }
+            Console.WriteLine("Tere {0}",nimi);
+            if (nimi.ToUpper()=="GHOUL?" || nimi.ToLower()=="zxc?")
+            {
+                
+                Console.WriteLine($"Tule külla! {nimi} Kas tahad kinno?");
+                string vastus = Console.ReadLine();
+                if (vastus.ToLower()=="jah" || vastus.ToLower()=="да")
+                {
+                    Console.WriteLine("how old are u?");
+                    int vanus = int.Parse(Console.ReadLine());
+                    if (vanus <= 0 || vanus > 109)
+                    {
+                        Console.WriteLine("Viga");
+                    }
+                    else
+                    {
+                        if (vanus > 0 && vanus < 6)
+                        {
+                            hind = 0;
+                            p_tuup = "tasuta";
+                        }
+                        else if (vanus >= 6 && vanus <= 14)
+                        {
+                            hind = hind - (hind * 0.35);
+                            p_tuup = "lastepilet";
+                        }
+                        else if (vanus >= 15 && vanus <= 65)
+                        {
+                            
+                            p_tuup = "täispilet";
+                        }
+                        else if (vanus >65)
+                        {
+                            hind = hind - (hind * 0.4);
+                            p_tuup = "soduspilet";
+                        }
+                        Console.WriteLine($"{nimi}, sul on {p_tuup} vaja maksta {hind}");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Daammmm");
+                }
             }
             else
             {
-                Console.WriteLine("Kui ei taha, siis ei taha :( ")
+                Console.WriteLine("Täna ma olen hõivatud!");
             }
-            Console.ReadKey();
-
-
-            //ConsoleKeyInfo klik;
-            //do
-            //{
-            //    klik = Console.ReadKey(true);
-            //    Console.Beep();
-            //} while (klik.Key != ConsoleKey.Escape;
-            //Environment.Exit(0);
+            //1
+            Console.WriteLine("Mis on sinu nimi?");
+            n2 = Console.ReadLine();
+            Console.WriteLine("Mis on sinu nimi?");
+            n3 = Console.ReadLine();
+            if ((n2=="mihhail" &&n3=="marco")|| (n3 == "mihhail" && n2 == "marco")|| (n3 == "ed" && n2 == "marco")|| (n2 == "ed" && n3 == "marco")||(n2=="er"&&n3=="vl")|| (n3 == "er" && n2 == "vl")||(n2=="a"&&n3=="a")||(n2=="a"&&n3=="d")||(n3 == "a" && n2 == "d")||(n2=="al"&&n3=="e")|| (n3 == "al" && n2 == "e"))
+            {
+                Console.WriteLine("Te olete pinginaabdrid");
+            }
+            else
+            {
+                Console.WriteLine("(((");
+            }
+            
+            //2
+            Console.WriteLine("Какова длина пола?");
+            a = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Какова ширина пола?");
+            b = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Хотите ли вы сделать ремонт?");
+            string vastus = Console.ReadLine();
+            if (vastus=="yes")
+            {
+                Console.WriteLine("Cколько стоит квадратный метр?");
+                float metr = float.Parse(Console.ReadLine());
+                double price = a * b * metr;
+                Console.WriteLine($"Цена замены пола {price}");
+            }
+            else
+            {
+                Console.WriteLine("Ну ладно");
+            }
+            
+            //3
+            Console.WriteLine("Цена со скидкой:");
+            double price_1 = Convert.ToDouble(Console.ReadLine());
+            double price_2 = price_1 * 100 / 70;
+            Console.WriteLine($"Изначальная цена: {price_2}");
+            
+            //4
+            Console.WriteLine("Какова температура воздуха в комнате?");
+            double temp = Convert.ToDouble(Console.ReadLine());
+            if (temp < 18)
+            {
+                Console.WriteLine("В комнате холодно");
+            }
+            else if (temp>28)
+            {
+                Console.WriteLine("В комнате жарко");
+            }
+            else
+            {
+                Console.WriteLine("В комнате нормальная температура");
+            }
+            
+            //5
+            Console.WriteLine("Какой у вас рост?");
+            double rost = Convert.ToDouble(Console.ReadLine());
+            if (rost < 156)
+            {
+                Console.WriteLine("Вы низкий");
+            }
+            else
+            {
+                Console.WriteLine("Вы высокий");
+            }
+            
+            //6
+            Console.WriteLine("Какого вы пола?");
+            string m_f = Console.ReadLine();
+            if (m_f.ToLower()=="женщина"|| m_f.ToLower() == "женский" || m_f.ToLower() == "женского")
+            {
+                Console.WriteLine("Какой у вас рост?");
+                double rost = Convert.ToDouble(Console.ReadLine());
+                if (rost < 150)
+                {
+                    Console.WriteLine("Вы низкая");
+                }
+                else if (rost>=150||rost<170)
+                {
+                    Console.WriteLine("У вас средний рост");
+                }
+                else
+                {
+                    Console.WriteLine("Вы высокая");
+                }
+            }
+            else if (m_f.ToLower() == "мужчина" || m_f.ToLower() == "мужской" || m_f.ToLower() == "мужского")
+            {
+                Console.WriteLine("Какой у вас рост?");
+                double rost = Convert.ToDouble(Console.ReadLine());
+                if (rost < 160)
+                {
+                    Console.WriteLine("Вы низкий");
+                }
+                else if (rost >= 160 || rost < 180)
+                {
+                    Console.WriteLine("У вас средний рост");
+                }
+                else
+                {
+                    Console.WriteLine("Вы высокий");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Вы неправильно написали");
+            }
+            
+            //7
+            Console.WriteLine("Хотите ли вы купить молоко?");
+            string vastus_1 = Console.ReadLine().ToLower();
+            Console.WriteLine("Хотите ли вы купить булку?");
+            string vastus_2 = Console.ReadLine().ToLower();
+            Console.WriteLine("Хотите ли вы купить хлеб?");
+            string vastus_3 = Console.ReadLine().ToLower();
+            if (vastus_1=="да" && vastus_2=="да" && vastus_3 == "да")
+            {
+                Console.WriteLine("Это будет стоить 3.5 евро");
+            }
+            else if (vastus_1 == "да" && vastus_2 == "да")
+            {
+                Console.WriteLine("Это будет стоить 2.4 евро");
+            }
+            else if (vastus_2 == "да" && vastus_3 == "да")
+            {
+                Console.WriteLine("Это будет стоить 2 евро");
+            }
+            else if (vastus_1 == "да" && vastus_3 == "да")
+            {
+                Console.WriteLine("Это будет стоить 2.2 евро");
+            }
+            else if (vastus_1 == "да")
+            {
+                Console.WriteLine("Это будет стоить 1.6 евро");
+            }
+            else if (vastus_2 == "да")
+            {
+                Console.WriteLine("Это будет стоить 90 центов");
+            }
+            else if (vastus_3 == "да")
+            {
+                Console.WriteLine("Это будет стоить 1 евро");
+            }
+            else
+            {
+                Console.WriteLine("Ну ладно");
+            }
+            
+            ConsoleKeyInfo klik;
+            do
+            {
+                klik = Console.ReadKey(true);
+                Console.Beep();
+            } while (klik.Key != ConsoleKey.Escape);
+            Environment.Exit(0);
         }
     }
 }
