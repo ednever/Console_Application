@@ -98,7 +98,7 @@ namespace Console_App1
             double b;
             b = Convert.ToDouble(Console.ReadLine());
             double pindala = a * b;
-            Console.WriteLine($" Teie pindala - {pindala} m²");
+            Console.WriteLine(pindala); //"Teie pindala - {0} m2",
             Console.WriteLine("Kas tahate remonti teha? (+/-)");
             string vastus = Console.ReadLine();
             if(vastus == "+")
@@ -106,13 +106,16 @@ namespace Console_App1
                 Console.WriteLine("Kui palju maksab 1 ruutmeeter?");
                 double hind;
                 hind = Convert.ToDouble(Console.ReadLine());
-                Console.WriteLine($"Teie remondi eest tuleb maksta {pindala * hind} eurot")
+                double raha = pindala * hind
+                Console.WriteLine(raha) //"Teie remondi eest tuleb maksta {0} eurot",
             }
             else
             {
                 Console.WriteLine("Kui ei taha, siis ei taha :( ")
             }
             Console.ReadKey();
+
+
             //ConsoleKeyInfo klik;
             //do
             //{
