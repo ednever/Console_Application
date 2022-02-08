@@ -95,21 +95,31 @@ namespace Console_App1
             Console.WriteLine("Kirjutage ristkülikukujulise toa seinte pikkused");
             double a;
             a = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine($"{a}");
             double b;
             b = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine($"{b}");
-            Console.WriteLine("Remont?");
+            double pindala = a * b;
+            Console.WriteLine($" Teie pindala - {pindala} m²");
+            Console.WriteLine("Kas tahate remonti teha? (+/-)");
             string vastus = Console.ReadLine();
-
-
-            ConsoleKeyInfo klik;
-            do
+            if(vastus == "+")
             {
-                klik = Console.ReadKey(true);
-                Console.Beep();
-            } while (klik.Key != ConsoleKey.Escape;
-            Environment.Exit(0);
+                Console.WriteLine("Kui palju maksab 1 ruutmeeter?");
+                double hind;
+                hind = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine($"Teie remondi eest tuleb maksta {pindala * hind} eurot")
+            }
+            else
+            {
+                Console.WriteLine("Kui ei taha, siis ei taha :( ")
+            }
+            Console.ReadKey();
+            //ConsoleKeyInfo klik;
+            //do
+            //{
+            //    klik = Console.ReadKey(true);
+            //    Console.Beep();
+            //} while (klik.Key != ConsoleKey.Escape;
+            //Environment.Exit(0);
         }
     }
 }
