@@ -56,22 +56,79 @@ namespace Console_App1
             //    Console.WriteLine(i * i);
             //}
             //3
-            int[] arvud = new int[5];
-            for (int mops = 0; mops < arvud.Length; mops++)
+            //int[] arvud = new int[5];
+            //for (int mops = 0; mops < arvud.Length; mops++)
+            //{
+            //    arvud[mops] = int.Parse(Console.ReadLine());
+            //}
+            //int summa = 0;
+            //int korrutis = 1;
+            //foreach (int arv in arvud)
+            //{
+            //    summa += arv;
+            //    korrutis *= arv;
+            //}
+            //Console.WriteLine($"Summa - {summa}, Srednee - {summa / arvud.Length}, Korrutis - {korrutis}");
+            //4
+            //do
+            //{
+            //    Console.WriteLine("Osta elevant ära!");
+            //    string sona = Console.ReadLine();
+            //} while (sona == "elevant");
+            //Console.WriteLine("Hästi");
+            //5
+            //Random rnd = new Random();
+            //int arv = rnd.Next(1,3);
+            //Console.WriteLine("Kirjuta arv, mis arvuti mõtles välja");
+            //for (int i = 0; i < 5; i++)
+            //{
+            //    int sona = int.Parse(Console.ReadLine());
+            //    if (sona == arv)
+            //    {
+            //        Console.WriteLine("Tubli");
+            //        break;
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("Ei ole tubli");
+            //    }
+            //}
+            //6
+            //Console.WriteLine("Palun kirjuta neli arve");
+            //int[] arvud = new int[4];
+            //for (int i = 0; i < arvud.Length; i++)
+            //{
+            //    arvud[i] = int.Parse(Console.ReadLine());
+            //}
+            //int abi;
+            //for (int i = 0; i < arvud.Length - 1; i++)
+            //{
+            //    for (int j = i + 1; j < arvud.Length; j++)
+            //    {
+            //        if (arvud[i] < arvud[j])
+            //        {
+            //            abi = arvud[i];
+            //            arvud[i] = arvud[j];
+            //            arvud[j] = abi;
+            //        }
+            //    }
+            //}
+            //Console.WriteLine("Koostatud nendest arvudest suurim neliarvuline arv");
+            //for (int i = 0; i < arvud.Length; i++)
+            //{
+            //    Console.Write(arvud[i]);
+            //}
+            //7
+            for (int stroka = 1; stroka <= 10; stroka++)
             {
-                arvud[mops] = int.Parse(Console.ReadLine());
+                for (int rjad = 1; rjad <= 10; rjad++)
+                {
+                    Console.Write("\t" + stroka * rjad);
+                }
+                Console.WriteLine();
+                Console.WriteLine();
             }
-            int summa = 0;
-            int korrutis = 1;
-            foreach (int arv in arvud)
-            {
-                summa += arv;
-                korrutis *= arv;
-            }
-            Console.WriteLine($"Summa - {summa}, Srednee - {summa / arvud.Length}, Korrutis - {korrutis}");
-
-
-
+            
             Console.ReadLine();
         }
     }
