@@ -11,18 +11,11 @@ namespace Console_App1
         static void Main(string[] args)
         {
             //1
-            //Random rnd = new Random();
-            //int[] arvud = new int[10];
-            //for (int i = 0; i < arvud.Length; i++)
-            //{
-            //    arvud[i] = rnd.Next(1, 100);
-            //}
-            //foreach (int arv in arvud)
-            //{
-            //    Console.Write($"{arv,4}");
-            //}
+            //Array arvud;
+            //arvud = Funktsioonid.Arvud_Massiiviisse(5, true);
+            //Funktsioonid.Arvud_Ekraanile(arvud);
             //Console.WriteLine();
-            //string[] nimed = new string[5] {"Anna", "Olga", "Edgar", "Mark", "Jegor"};
+            //string[] nimed = new string[5] { "Anna", "Olga", "Edgar", "Mark", "Jegor" };
             //int a = 0;
             //do
             //{
@@ -35,8 +28,9 @@ namespace Console_App1
             //    {
             //        Console.WriteLine(e);
             //    }
-            //} while (a<1 || a>5);
-            //Console.WriteLine(nimed[a-1]);
+            //} while (a < 1 || a > 5);
+            //Console.WriteLine(nimed[a - 1]);
+
             //2
             //Random rnd = new Random();
             //int N = rnd.Next(1, 100);
@@ -55,27 +49,28 @@ namespace Console_App1
             //    NM[i-N] = i;
             //    Console.WriteLine(i * i);
             //}
+
             //3
-            //int[] arvud = new int[5];
-            //for (int mops = 0; mops < arvud.Length; mops++)
-            //{
-            //    arvud[mops] = int.Parse(Console.ReadLine());
-            //}
+            //Array arvud;
+            //arvuD = Funktsioonid.Arvud_Massiiviisse(5, true);
             //int summa = 0;
             //int korrutis = 1;
-            //foreach (int arv in arvud)
+            //foreach (int arv in arvuD)
             //{
             //    summa += arv;
             //    korrutis *= arv;
             //}
             //Console.WriteLine($"Summa - {summa}, Srednee - {summa / arvud.Length}, Korrutis - {korrutis}");
+
             //4
+            //string sona;
             //do
             //{
             //    Console.WriteLine("Osta elevant ära!");
-            //    string sona = Console.ReadLine();
-            //} while (sona == "elevant");
+            //    sona = Console.ReadLine();
+            //} while (sona != "elevant");
             //Console.WriteLine("Hästi");
+
             //5
             //Random rnd = new Random();
             //int arv = rnd.Next(1,3);
@@ -93,13 +88,10 @@ namespace Console_App1
             //        Console.WriteLine("Ei ole tubli");
             //    }
             //}
+
             //6
-            //Console.WriteLine("Palun kirjuta neli arve");
-            //int[] arvud = new int[4];
-            //for (int i = 0; i < arvud.Length; i++)
-            //{
-            //    arvud[i] = int.Parse(Console.ReadLine());
-            //}
+            //Array arvud;
+            //arvud = Funktsioonid.Arvud_Massiiviisse(4, true);
             //int abi;
             //for (int i = 0; i < arvud.Length - 1; i++)
             //{
@@ -118,17 +110,51 @@ namespace Console_App1
             //{
             //    Console.Write(arvud[i]);
             //}
+
+            //6 variant 2
+            //Console.WriteLine("Palun kirjuta neli arve");
+            //Array arvud;
+            //arvud = Funktsioonid.Arvud_Massiiviisse(4, true);
+            //Array.Sort(arvud);
+            //int D = 0;
+            //for (int t = 0; t < arvud.Length; t++)
+            //{
+            //    D = (int)(D + arvud[t] * Math.Pow(10, t));
+            //}
+            //Console.WriteLine(D);
+
             //7
-            for (int stroka = 1; stroka <= 10; stroka++)
-            {
-                for (int rjad = 1; rjad <= 10; rjad++)
-                {
-                    Console.Write("\t" + stroka * rjad);
-                }
-                Console.WriteLine();
-                Console.WriteLine();
-            }
+            //for (int stroka = 1; stroka < 11; stroka++)
+            //{
+            //    for (int rjad = 1; rjad < 11; rjad++)
+            //    {
+            //        Console.Write("\t" + stroka * rjad);
+            //    }
+            //    Console.WriteLine();
+            //    Console.WriteLine();
+            //}
+
+            //7 variant 2
+            //int[,] tabel = new int[10, 10];
+            //for (int s = 1; s < 11; s++)
+            //{
+            //    for (int r = 1; r < 11; r++)
+            //    {
+            //        tabel[s, r] = s * r;
+            //        Console.Write($"{s * r,4}");
+            //    }
+            //    Console.WriteLine();
+            //}
+
+            //int q = 10;
+            //int korrutis = Funktsioonid.Korrutamine(q, 5);
+            //Console.WriteLine(korrutis);
+
+            //8
+            Console.WriteLine(Funktsioonid.Keskmine(4));
             
+            //9
+
             Console.ReadLine();
         }
     }
