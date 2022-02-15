@@ -71,6 +71,20 @@ namespace Console_App1
             kesk = Math.Round(kesk / N,4);
             return kesk;
         }
-
+        public static void Kass(double result)
+        {            
+            for (int i = 0; i < result; i++)
+            {
+                Console.Write("nurr ");
+            }
+        }
+        public static void Zvezda(int arv)
+        {
+            for (int i = 0; i < arv; i++)
+            {
+                Console.Write("*");
+            }
+            Console.WriteLine();
+        }
     }
 }

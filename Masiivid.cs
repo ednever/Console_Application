@@ -151,9 +151,51 @@ namespace Console_App1
             //Console.WriteLine(korrutis);
 
             //8
-            Console.WriteLine(Funktsioonid.Keskmine(4));
-            
+            //Console.WriteLine(Funktsioonid.Keskmine(4));
+
             //9
+            Console.WriteLine("Palun kirjuta arv, tehe ja teine arv");
+            int arv = int.Parse(Console.ReadLine());
+            string tehe = Console.ReadLine();
+            int arv2 = int.Parse(Console.ReadLine());
+            double result = 0;
+            if (tehe == "+")
+            {
+                result = arv + arv2;
+                Funktsioonid.Kass(result);
+            }
+            else if (tehe == "-")
+            {
+                result = arv - arv2;
+                Funktsioonid.Kass(result);
+            }
+            else if (tehe == "*")
+            {
+                result = arv * arv2;
+                Funktsioonid.Kass(result);
+            }
+            else if (tehe == "/")
+            {
+                result = arv / arv2;
+                Math.Round(result);
+                Funktsioonid.Kass(result);
+            }
+            else
+            {
+                Console.WriteLine("Ups...");
+            }
+
+            //10
+            //Console.WriteLine("Kirjuta kui palju tahad arvu tärnidega väljatrükkida");
+            //int kogu = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Kirjuta arvud");
+            //Array arvud;
+            //arvud = Funktsioonid.Arvud_Massiiviisse(kogu,true);
+            //foreach (int arv in arvud)
+            //{
+            //    Console.Write($"{arv} >>> ");
+            //    Funktsioonid.Zvezda(arv);
+            //}
 
             Console.ReadLine();
         }
