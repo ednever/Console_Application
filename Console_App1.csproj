@@ -51,7 +51,7 @@
     <ApplicationIcon>sunset_sun_sunshine_sunrise_weather_icon_194245.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Console_App1.Masiivid</StartupObject>
+    <StartupObject>Console_App1.Loendid</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -65,6 +65,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Funktsioonid.cs" />
+    <Compile Include="Inimesed.cs" />
+    <Compile Include="Loendid.cs" />
     <Compile Include="Masiivid.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
