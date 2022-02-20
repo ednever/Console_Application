@@ -70,27 +70,31 @@ namespace Console_App1
             //}
 
             //1 Ülesanne
-            //LinkedList<int> numbrid = new LinkedList<int>();
-            //Random rnd = new Random();
+            //List<int> numbrid = new List<int>();
+            //Console.WriteLine("Sisetage 5 arvu");
             //for (int i = 0; i < 5; i++)
             //{
-            //    numbrid.AddLast(int.Parse(Console.ReadLine()));
+            //    numbrid.Add(int.Parse(Console.ReadLine()));
             //}
-            //LinkedList<int>.Enumerator ahel = numbrid.GetEnumerator();
-            //while (ahel.MoveNext())
+            //foreach (int num in numbrid)
             //{
-            //    Console.Write(ahel.Current+" ");
+            //    Console.Write(num + " ");
             //}
-            //int j = 0;
-            //foreach (int item in numbrid)
+            //foreach (int num in numbrid)
             //{
-            //    if (j == 0)
+            //    if (numbrid.IndexOf(num) == 0)
             //    {
-
+            //        Console.Write(numbrid[4] + numbrid[1] + " ");
             //    }
-            //    j++;
+            //    else if (numbrid.IndexOf(num) == 4)
+            //    {
+            //        Console.Write(numbrid[3] + numbrid[0] + " ");
+            //    }
+            //    else
+            //    {
+            //        Console.Write(numbrid[numbrid.IndexOf(num) - 1] + numbrid[numbrid.IndexOf(num) + 1] + " ");
+            //    }
             //}
-
 
             //2 Ülesanne
             //Random rnd = new Random();
@@ -102,7 +106,7 @@ namespace Console_App1
             //}
             //foreach (int number in numbrid)
             //{
-            //    Console.Write(number+" ");
+            //    Console.Write(number + " ");
             //    if (number % 2 == 0)
             //    {
             //        numbrid2.AddFirst(number);
@@ -121,54 +125,62 @@ namespace Console_App1
 
             //3 Ülesanne
             List<string> tooded = new List<string>();
+            tooded.Add("leib");
+            tooded.Add("piim");
+            tooded.Add("õun");
             List<double> kalorid = new List<double>();
-            Console.WriteLine("Olete naine või mees? (woman/man)");
+            kalorid.Add(265);
+            kalorid.Add(42);
+            kalorid.Add(52);
+            Console.WriteLine("Olete naine või mees? (naine/mees)");
             string soo = Console.ReadLine();
             Console.WriteLine("Palun sisetage oma kaal, pikkus ja vanus");
             int kaal = int.Parse(Console.ReadLine());
-            int pikkus = int.Parse(Console.ReadLine());
+            double pikkus = double.Parse(Console.ReadLine());
             int vanus = int.Parse(Console.ReadLine());
-            Console.WriteLine("1/1,2/2,3/3,4/4,5/5");
+            Console.WriteLine("Passiivne elustiil/1, Vähe tegevust/2, Mõõdukas aktiivsus/3, Kõrge aktiivsus/4, Väga kõrge aktiivsus/5");
             string sport = Console.ReadLine();
-            if (soo == "man")
+            double BOO = 0;
+            double calories = 0;
+            if (soo == "mees")
             {
-                double ВОО = 66 + (13.7 * kaal) + (5 * pikkus) - (6.8 * vanus);
+                BOO = 66 + (13.7 * kaal) + (5 * pikkus) - (6.8 * vanus);
             }
-            else if (soo == "woman")
+            else if (soo == "naine")
             {
-                double ВОО = 655 + (9.6 * kaal) + (1.8 * pikkus) - (4.7 * vanus);
-                Console.WriteLine();
+                BOO = 655 + (9.6 * kaal) + (1.8 * pikkus) - (4.7 * vanus);
             }
-            else
-            {
-                Console.WriteLine("Vale vastus");   
-            }
-            Console.WriteLine(BOO);
             if (sport == "1")
             {
-                double calories = BOO * 1.2;
+                calories = BOO * 1.2;
             }
             else if (sport == "2")
             {
-                double calories = BOO * 1.375;
+                calories = BOO * 1.375;
             }
             else if (sport == "3")
             {
-                double calories = BOO * 1.55;
+                calories = BOO * 1.55;
             }
             else if (sport == "4")
             {
-                double calories = BOO * 1.725;
+                calories = BOO * 1.725;
             }
             else if (sport == "5")
             {
-                double calories = BOO * 1.9;
+                calories = BOO * 1.9;
             }
-            else
+            Console.WriteLine($"Teie kalorite norm päevas - {Math.Round(calories, 2)}");
+            foreach (var item in tooded)
             {
-                Console.WriteLine("Vale vastus");
+                Console.Write(item + ", ");
             }
-            Console.WriteLine($"Teie kalorite norm päevas - {calories}");
+            Console.WriteLine();
+            foreach (int toode in kalorid)
+            {
+                Console.WriteLine(Math.Round(calories / toode, 2));
+            }
+
             //4 Ülesanne
 
 
