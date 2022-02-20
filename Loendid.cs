@@ -124,17 +124,51 @@ namespace Console_App1
             List<double> kalorid = new List<double>();
             Console.WriteLine("Olete naine või mees? (woman/man)");
             string soo = Console.ReadLine();
-            Console.WriteLine("Palun sisetage oma kaal");
-            string kaal = Console.ReadLine();
+            Console.WriteLine("Palun sisetage oma kaal, pikkus ja vanus");
+            int kaal = int.Parse(Console.ReadLine());
+            int pikkus = int.Parse(Console.ReadLine());
+            int vanus = int.Parse(Console.ReadLine());
+            Console.WriteLine("1/1,2/2,3/3,4/4,5/5");
+            string sport = Console.ReadLine();
             if (soo == "man")
             {
-
+                double ВОО = 66 + (13.7 * kaal) + (5 * pikkus) - (6.8 * vanus);
+            }
+            else if (soo == "woman")
+            {
+                double ВОО = 655 + (9.6 * kaal) + (1.8 * pikkus) - (4.7 * vanus);
+                Console.WriteLine();
             }
             else
             {
-
+                Console.WriteLine("Vale vastus");   
             }
-
+            Console.WriteLine(BOO);
+            if (sport == "1")
+            {
+                double calories = BOO * 1.2;
+            }
+            else if (sport == "2")
+            {
+                double calories = BOO * 1.375;
+            }
+            else if (sport == "3")
+            {
+                double calories = BOO * 1.55;
+            }
+            else if (sport == "4")
+            {
+                double calories = BOO * 1.725;
+            }
+            else if (sport == "5")
+            {
+                double calories = BOO * 1.9;
+            }
+            else
+            {
+                Console.WriteLine("Vale vastus");
+            }
+            Console.WriteLine($"Teie kalorite norm päevas - {calories}");
             //4 Ülesanne
 
 
