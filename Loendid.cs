@@ -70,31 +70,36 @@ namespace Console_App1
             //}
 
             //1 Ülesanne
-            //List<int> numbrid = new List<int>();
-            //Console.WriteLine("Sisetage 5 arvu");
-            //for (int i = 0; i < 5; i++)
-            //{
-            //    numbrid.Add(int.Parse(Console.ReadLine()));
-            //}
-            //foreach (int num in numbrid)
-            //{
-            //    Console.Write(num + " ");
-            //}
-            //foreach (int num in numbrid)
-            //{
-            //    if (numbrid.IndexOf(num) == 0)
-            //    {
-            //        Console.Write(numbrid[4] + numbrid[1] + " ");
-            //    }
-            //    else if (numbrid.IndexOf(num) == 4)
-            //    {
-            //        Console.Write(numbrid[3] + numbrid[0] + " ");
-            //    }
-            //    else
-            //    {
-            //        Console.Write(numbrid[numbrid.IndexOf(num) - 1] + numbrid[numbrid.IndexOf(num) + 1] + " ");
-            //    }
-            //}
+            List<int> numbrid = new List<int>();
+            Console.WriteLine("Sisetage 5 arvu");
+            for (int i = 0; i < 5; i++)
+            {
+                numbrid.Add(int.Parse(Console.ReadLine()));
+            }
+            foreach (int num in numbrid)
+            {
+                Console.Write(num + " ");
+            }
+            Console.WriteLine();
+            foreach (int num in numbrid)
+            {
+                if (numbrid.IndexOf(num) == 0)
+                {
+                    Console.Write(numbrid[4] + numbrid[1] + " ");
+                }
+                else if (numbrid.IndexOf(num) == 4)
+                {
+                    Console.Write(numbrid[3] + numbrid[0] + " ");
+                }
+                else
+                {
+                    Console.Write(numbrid[numbrid.IndexOf(num) - 1] + numbrid[numbrid.IndexOf(num) + 1] + " ");
+                }
+            }
+
+            //int a1 = numbrid[0];
+            //int an = numbrid[numbrid.Count - 1];
+            //numbrid.Insert(0, an);
 
             //2 Ülesanne
             //Random rnd = new Random();
